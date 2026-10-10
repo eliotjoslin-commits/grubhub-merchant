@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Grubhub Merchant Menu Image Platform Architecture",
+    "subtitle": "Serverless microservices on Google Cloud powered by Gemini 3.0+ & Vertex AI",
+    "viewBox": [
+      1080,
+      620
+    ],
+    "visual_preset": "blueprint",
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "ingress-view",
+        "label": "1. Ingress & Microservice Gateway",
+        "focus": [
+          "merchant_ui",
+          "api_gateway"
+        ],
+        "note": "Merchant uploads traffic connects directly via HTTPS to stateless Cloud Run containers with native Google Cloud TLS & DDoS protection."
+      },
+      {
+        "id": "moderation-view",
+        "label": "2. Preflight & Policy Moderation",
+        "focus": [
+          "api_gateway",
+          "preflight",
+          "gemini_flash",
+          "vision_api"
+        ],
+        "note": "Submissions undergo dimension check, MIME sniffing, 12 SOP checks with Gemini 3.8 Flash, and copyright check."
+      },
+      {
+        "id": "studio-audit-view",
+        "label": "3. Commercial Studio Reshoot & Audit",
+        "focus": [
+          "api_gateway",
+          "gemini_image",
+          "truth_auditor",
+          "self_healer"
+        ],
+        "note": "Gemini Nano Banana 2.1 reshoots dish, audited by Gemini 3.8 Flash with Actor-Critic self-healing loop."
+      },
+      {
+        "id": "persistence-view",
+        "label": "4. Enterprise Storage & Menu Sync",
+        "focus": [
+          "api_gateway",
+          "gcs_storage",
+          "decisions_ledger"
+        ],
+        "note": "Approved assets with SynthID v2 watermarks sync to GCS and update the centralized moderation decisions audit ledger."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "merchant_ui",
+      "type": "frontend",
+      "label": "Merchant Portal",
+      "sublabel": "Batch Dropzone",
+      "pos": [
+        100,
+        240
+      ],
+      "size": [
+        126,
+        62
+      ],
+      "tag": "Merchant App"
+    },
+    {
+      "id": "api_gateway",
+      "type": "backend",
+      "label": "Cloud Run Gateway",
+      "sublabel": "FastAPI Stateless",
+      "pos": [
+        364,
+        240
+      ],
+      "size": [
+        130,
+        62
+      ],
+      "tag": "Control Plane"
+    },
+    {
+      "id": "preflight",
+      "type": "backend",
+      "label": "Preflight Engine",
+      "sublabel": "1600px / Lanczos",
+      "pos": [
+        530,
+        110
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Phase A"
+    },
+    {
+      "id": "gemini_flash",
+      "type": "cloud",
+      "label": "Gemini 3.8 Flash",
+      "sublabel": "12-SOP Policy Check",
+      "pos": [
+        704,
+        110
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Phase B"
+    },
+    {
+      "id": "vision_api",
+      "type": "external",
+      "label": "Cloud Vision",
+      "sublabel": "Web Copyright Gate",
+      "pos": [
+        878,
+        110
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Copyright"
+    },
+    {
+      "id": "gemini_image",
+      "type": "cloud",
+      "label": "Nano Banana 2.1",
+      "sublabel": "Studio Reshoot",
+      "pos": [
+        530,
+        330
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Phase C"
+    },
+    {
+      "id": "truth_auditor",
+      "type": "cloud",
+      "label": "Truth Auditor",
+      "sublabel": "Gemini 3.8 Flash",
+      "pos": [
+        704,
+        330
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Phase D"
+    },
+    {
+      "id": "self_healer",
+      "type": "security",
+      "label": "Actor-Critic Loop",
+      "sublabel": "Pass 2 Self-Healing",
+      "pos": [
+        878,
+        330
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Remediation"
+    },
+    {
+      "id": "gcs_storage",
+      "type": "database",
+      "label": "Cloud Storage",
+      "sublabel": "GCS Assets Bucket",
+      "pos": [
+        364,
+        460
+      ],
+      "size": [
+        130,
+        62
+      ],
+      "tag": "Persistence"
+    },
+    {
+      "id": "imagen_edit",
+      "type": "cloud",
+      "label": "Imagen 3 (Edit)",
+      "sublabel": "Optional BGSWAP",
+      "pos": [
+        530,
+        460
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Manual Edit"
+    },
+    {
+      "id": "decisions_ledger",
+      "type": "database",
+      "label": "Decisions Ledger",
+      "sublabel": "GCS Audit State",
+      "pos": [
+        704,
+        460
+      ],
+      "size": [
+        138,
+        62
+      ],
+      "tag": "Audit State"
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Google Cloud Platform / us-central1",
+      "wraps": [
+        "api_gateway",
+        "preflight",
+        "gcs_storage",
+        "decisions_ledger"
+      ],
+      "pad": 16
+    },
+    {
+      "kind": "security-group",
+      "label": "Vertex AI Global Foundation Models",
+      "wraps": [
+        "gemini_flash",
+        "vision_api",
+        "gemini_image",
+        "truth_auditor",
+        "self_healer",
+        "imagen_edit"
+      ],
+      "pad": 16
+    }
+  ],
+  "connections": [
+    {
+      "from": "merchant_ui",
+      "to": "api_gateway",
+      "label": "HTTPS (Direct Ingress)",
+      "variant": "emphasis"
+    },
+    {
+      "from": "api_gateway",
+      "to": "preflight",
+      "label": "Preflight",
+      "route": "orthogonal-h",
+      "labelAt": [
+        512,
+        186
+      ]
+    },
+    {
+      "from": "preflight",
+      "to": "gemini_flash",
+      "label": "SOP Check",
+      "variant": "emphasis",
+      "labelAt": [
+        686,
+        186
+      ]
+    },
+    {
+      "from": "gemini_flash",
+      "to": "vision_api",
+      "label": "Web Detect",
+      "variant": "dashed",
+      "labelDy": -25
+    },
+    {
+      "from": "api_gateway",
+      "to": "gemini_image",
+      "label": "Studio Shoot",
+      "variant": "emphasis",
+      "route": "orthogonal-h",
+      "labelAt": [
+        512,
+        406
+      ]
+    },
+    {
+      "from": "gemini_image",
+      "to": "truth_auditor",
+      "label": "Audit Check",
+      "variant": "emphasis",
+      "labelDy": -25
+    },
+    {
+      "from": "truth_auditor",
+      "to": "self_healer",
+      "label": "Risk > 0.25",
+      "variant": "security",
+      "labelDy": -25
+    },
+    {
+      "from": "self_healer",
+      "to": "gemini_image",
+      "label": "Pass 2 Directive",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "top",
+      "via": [
+        [
+          947,
+          285
+        ],
+        [
+          599,
+          285
+        ]
+      ]
+    },
+    {
+      "from": "api_gateway",
+      "to": "gcs_storage",
+      "label": "GCS Sync",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight",
+      "labelDy": 30
+    },
+    {
+      "from": "gcs_storage",
+      "to": "imagen_edit",
+      "label": "Edit Mode",
+      "variant": "dashed",
+      "route": "straight",
+      "labelDy": -25
+    },
+    {
+      "from": "truth_auditor",
+      "to": "decisions_ledger",
+      "label": "Audit Sync",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight",
+      "labelDy": 30
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Ingress & Preflight",
+      "items": [
+        "Direct HTTPS connection to Cloud Run with native Google TLS & DDoS protection",
+        "Cloud Run hosts containerized stateless FastAPI ingestion service",
+        "Phase A executes 1600px working cap, MIME sniffing, and Lanczos upscaling"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Gemini 3.8 & Nano Banana 2.1",
+      "items": [
+        "Phase B: Gemini 3.8 Flash enforces 12 SOP rules with JSON Schema",
+        "Phase C: Gemini Nano Banana 2.1 drives commercial studio shoots",
+        "Imagen 3 (imagen-3.0-capability-001) is strictly optional manual edit mode"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Audit & Self-Healing",
+      "items": [
+        "Phase D: Gemini 3.8 Flash audits 7 criteria against FTC standards",
+        "Actor-Critic loop automatically re-shoots Pass 2 on hallucination or fallback",
+        "Zero sensitive GCP identifiers exposed in production architecture"
+      ]
+    }
+  ]
+}

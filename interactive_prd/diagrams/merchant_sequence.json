@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Merchant Intake & Actor-Critic Self-Healing Sequence",
+    "subtitle": "End-to-end execution flow from Carlos\u2019s smartphone upload to live menu publish",
+    "viewBox": [
+      1080,
+      680
+    ],
+    "column_fit": "spread",
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "intake-moderation",
+        "label": "1. Intake & Policy Clearance",
+        "focus": [
+          "merchant",
+          "ui",
+          "gateway",
+          "gemini_flash"
+        ],
+        "note": "Carlos uploads raw tacos photo; preflight and Gemini 3.8 Flash clear policy in under 1 second."
+      },
+      {
+        "id": "studio-audit",
+        "label": "2. Studio Reshoot & Truth Audit",
+        "focus": [
+          "gateway",
+          "gemini_image",
+          "gemini_flash"
+        ],
+        "note": "Gemini Nano Banana 2.1 shoots commercial scene; Gemini 3.8 Flash audits culinary accuracy."
+      },
+      {
+        "id": "persistence-publish",
+        "label": "3. Verification & Live Publish",
+        "focus": [
+          "gateway",
+          "gcs",
+          "ui",
+          "merchant"
+        ],
+        "note": "Asset is saved to GCS; Carlos inspects the split-view slider and publishes to live menu."
+      }
+    ]
+  },
+  "participants": [
+    {
+      "id": "merchant",
+      "type": "external",
+      "label": "Carlos (Merchant)",
+      "sublabel": "Tablet / Browser"
+    },
+    {
+      "id": "ui",
+      "type": "frontend",
+      "label": "Merchant Portal",
+      "sublabel": "React / Dropzone"
+    },
+    {
+      "id": "gateway",
+      "type": "backend",
+      "label": "Cloud Run Gateway",
+      "sublabel": "FastAPI Service"
+    },
+    {
+      "id": "gemini_flash",
+      "type": "cloud",
+      "label": "Gemini 3.8 Flash",
+      "sublabel": "Moderation & Audit"
+    },
+    {
+      "id": "gemini_image",
+      "type": "cloud",
+      "label": "Nano Banana 2.1",
+      "sublabel": "Studio Reshoot"
+    },
+    {
+      "id": "gcs",
+      "type": "database",
+      "label": "Cloud Storage",
+      "sublabel": "GCS Assets Bucket"
+    }
+  ],
+  "segments": [
+    {
+      "from": 150,
+      "to": 270,
+      "label": "Phase 1: Intake & Policy Moderation"
+    },
+    {
+      "from": 280,
+      "to": 440,
+      "label": "Phase 2: Generative Studio Shoot & Audit"
+    },
+    {
+      "from": 450,
+      "to": 590,
+      "label": "Phase 3: Verification & Live Menu Publish"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-drop",
+      "from": "merchant",
+      "to": "ui",
+      "y": 165,
+      "label": "Drops tacos.jpg onto dropzone",
+      "variant": "default"
+    },
+    {
+      "id": "msg-upload",
+      "from": "ui",
+      "to": "gateway",
+      "y": 195,
+      "label": "POST /api/upload (multipart)",
+      "variant": "emphasis"
+    },
+    {
+      "id": "msg-sop-check",
+      "from": "gateway",
+      "to": "gemini_flash",
+      "y": 225,
+      "label": "Phase B: 12 SOP Checks + Vision",
+      "variant": "emphasis"
+    },
+    {
+      "id": "msg-sop-pass",
+      "from": "gemini_flash",
+      "to": "gateway",
+      "y": 255,
+      "label": "AUTO_APPROVE (Food=1, Quality=0.70)",
+      "variant": "return"
+    },
+    {
+      "id": "msg-studio-shoot",
+      "from": "gateway",
+      "to": "gemini_image",
+      "y": 300,
+      "label": "Phase C: Studio Reshoot (warm slate)",
+      "variant": "emphasis"
+    },
+    {
+      "id": "msg-studio-return",
+      "from": "gemini_image",
+      "to": "gateway",
+      "y": 335,
+      "label": "Commercial Photo (1024x1024)",
+      "variant": "return"
+    },
+    {
+      "id": "msg-audit-check",
+      "from": "gateway",
+      "to": "gemini_flash",
+      "y": 375,
+      "label": "Phase D: 7-Criteria Truth Audit",
+      "variant": "security"
+    },
+    {
+      "id": "msg-audit-pass",
+      "from": "gemini_flash",
+      "to": "gateway",
+      "y": 410,
+      "label": "Audit Pass (0 hallucinations, Risk: 0.05)",
+      "variant": "return"
+    },
+    {
+      "id": "msg-gcs-sync",
+      "from": "gateway",
+      "to": "gcs",
+      "y": 470,
+      "label": "Upload enhanced_tacos.jpg & ledger",
+      "variant": "emphasis"
+    },
+    {
+      "id": "msg-gcs-ack",
+      "from": "gcs",
+      "to": "gateway",
+      "y": 500,
+      "label": "Canonical GCS URIs created",
+      "variant": "return"
+    },
+    {
+      "id": "msg-ui-return",
+      "from": "gateway",
+      "to": "ui",
+      "y": 535,
+      "label": "200 OK + pre-rendered dish card",
+      "variant": "return"
+    },
+    {
+      "id": "msg-card-render",
+      "from": "ui",
+      "to": "merchant",
+      "y": 565,
+      "label": "Split slider ready: Accept & Publish",
+      "variant": "return"
+    }
+  ],
+  "activations": [
+    {
+      "participant": "ui",
+      "from": 165,
+      "to": 570,
+      "type": "frontend"
+    },
+    {
+      "participant": "gateway",
+      "from": 195,
+      "to": 540,
+      "type": "backend"
+    },
+    {
+      "participant": "gemini_flash",
+      "from": 225,
+      "to": 260,
+      "type": "cloud"
+    },
+    {
+      "participant": "gemini_image",
+      "from": 300,
+      "to": 340,
+      "type": "cloud"
+    },
+    {
+      "participant": "gemini_flash",
+      "from": 375,
+      "to": 415,
+      "type": "cloud"
+    },
+    {
+      "participant": "gcs",
+      "from": 470,
+      "to": 505,
+      "type": "database"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Sub-Second Moderation",
+      "items": [
+        "Preflight completes 1600px cap, dimension, and format check in <50ms",
+        "Gemini 3.8 Flash clears food validation and SafeSearch in parallel",
+        "Three-Tier SOP gate authorizes progression to studio reshoot"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Dual-Model Studio & Audit",
+      "items": [
+        "Gemini Nano Banana 2.1 generates realistic lighting and contact shadows",
+        "Gemini 3.8 Flash audits 7 criteria against culinary hallucinations",
+        "Imagen 3 (imagen-3.0-capability-001) is strictly optional manual edit mode"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Instant Merchant Approval",
+      "items": [
+        "Interactive split-view slider gives merchant total visual control",
+        "GCS persistence guarantees 0% broken links across cold starts",
+        "Single-click publish synchronizes asset directly to live menu"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "5-Stage Food Image Ingestion & Moderation Dataflow",
+    "subtitle": "Automated ingestion pipeline from raw merchant upload to FTC-verified live menu asset",
+    "viewBox": [
+      1080,
+      560
+    ],
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "intake-path",
+        "label": "1. Intake & Preflight",
+        "focus": [
+          "upload",
+          "batch_queue",
+          "preflight",
+          "fast_fail"
+        ],
+        "note": "Submissions are checked for format, dimensions, and Lanczos upscaled if low-res."
+      },
+      {
+        "id": "moderation-path",
+        "label": "2. Gemini 3.8 Policy Moderation",
+        "focus": [
+          "preflight",
+          "gemini_sop",
+          "vision_web"
+        ],
+        "note": "Gemini 3.8 Flash executes 12 discrete SOP checks; Vision API verifies copyright clearance."
+      },
+      {
+        "id": "studio-audit-path",
+        "label": "3. Commercial Studio & Truth Audit",
+        "focus": [
+          "gemini_sop",
+          "studio_shoot",
+          "truth_auditor"
+        ],
+        "note": "Gemini Nano Banana 2.1 reshoots dish, followed by Gemini 3.8 Flash Truth-in-Advertising audit."
+      },
+      {
+        "id": "delivery-path",
+        "label": "4. Provenance & Catalog Publish",
+        "focus": [
+          "truth_auditor",
+          "synthid",
+          "gcs_store",
+          "live_menu"
+        ],
+        "note": "Approved images receive SynthID v2 watermarks, persist to GCS, and publish to menus."
+      }
+    ]
+  },
+  "stages": [
+    {
+      "label": "1. Intake"
+    },
+    {
+      "label": "2. Preflight"
+    },
+    {
+      "label": "3. Moderation"
+    },
+    {
+      "label": "4. Studio & Audit"
+    },
+    {
+      "label": "5. Delivery"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "upload",
+      "type": "frontend",
+      "label": "Single Intake",
+      "sublabel": "Merchant Portal",
+      "stage": 0,
+      "row": 0,
+      "tag": "Intake"
+    },
+    {
+      "id": "batch_queue",
+      "type": "frontend",
+      "label": "Batch Intake",
+      "sublabel": "Multi-Photo Queue",
+      "stage": 0,
+      "row": 1,
+      "tag": "Intake"
+    },
+    {
+      "id": "preflight",
+      "type": "backend",
+      "label": "Preflight Engine",
+      "sublabel": "1600px / Lanczos",
+      "stage": 1,
+      "row": 0,
+      "tag": "Phase A"
+    },
+    {
+      "id": "fast_fail",
+      "type": "security",
+      "label": "Fast-Fail Gate",
+      "sublabel": "Defect Bypass <4.5s",
+      "stage": 1,
+      "row": 1,
+      "tag": "Bypass"
+    },
+    {
+      "id": "gemini_sop",
+      "type": "backend",
+      "label": "Gemini 3.8 Flash",
+      "sublabel": "12 SOP Rule Engine",
+      "stage": 2,
+      "row": 0,
+      "tag": "Phase B"
+    },
+    {
+      "id": "vision_web",
+      "type": "external",
+      "label": "Cloud Vision",
+      "sublabel": "Copyright Check",
+      "stage": 2,
+      "row": 1,
+      "tag": "Copyright"
+    },
+    {
+      "id": "studio_shoot",
+      "type": "backend",
+      "label": "Nano Banana 2.1",
+      "sublabel": "Studio Reshoot",
+      "stage": 3,
+      "row": 0,
+      "tag": "Phase C"
+    },
+    {
+      "id": "truth_auditor",
+      "type": "backend",
+      "label": "Truth Auditor",
+      "sublabel": "Gemini 3.8 Flash",
+      "stage": 3,
+      "row": 1,
+      "tag": "Phase D"
+    },
+    {
+      "id": "synthid",
+      "type": "security",
+      "label": "SynthID v2",
+      "sublabel": "Digital Provenance",
+      "stage": 4,
+      "row": 0,
+      "tag": "Provenance"
+    },
+    {
+      "id": "gcs_store",
+      "type": "database",
+      "label": "Cloud Storage",
+      "sublabel": "GCS Assets Bucket",
+      "stage": 4,
+      "row": 1,
+      "tag": "Persistence"
+    },
+    {
+      "id": "live_menu",
+      "type": "backend",
+      "label": "Menu Catalog",
+      "sublabel": "Live Diner Menus",
+      "stage": 4,
+      "row": 2,
+      "tag": "Catalog"
+    }
+  ],
+  "flows": [
+    {
+      "id": "single-to-preflight",
+      "from": "upload",
+      "to": "preflight",
+      "label": "single photo",
+      "classification": "multipart",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelAt": [
+        195,
+        120
+      ]
+    },
+    {
+      "id": "batch-to-preflight",
+      "from": "batch_queue",
+      "to": "preflight",
+      "label": "queued item",
+      "classification": "batched stream",
+      "variant": "default",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [
+        [
+          210,
+          271
+        ],
+        [
+          210,
+          157
+        ]
+      ],
+      "labelAt": [
+        180,
+        214
+      ]
+    },
+    {
+      "id": "preflight-to-sop",
+      "from": "preflight",
+      "to": "gemini_sop",
+      "label": "valid image",
+      "classification": "RGB matrix",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelAt": [
+        420,
+        144
+      ]
+    },
+    {
+      "id": "preflight-to-fail",
+      "from": "preflight",
+      "to": "fast_fail",
+      "label": "blur <0.35",
+      "classification": "unrecoverable",
+      "variant": "security",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight",
+      "labelAt": [
+        330,
+        214
+      ]
+    },
+    {
+      "id": "sop-to-vision",
+      "from": "gemini_sop",
+      "to": "vision_web",
+      "label": "web detect",
+      "classification": "reverse image",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight",
+      "labelAt": [
+        530,
+        214
+      ]
+    },
+    {
+      "id": "sop-to-studio",
+      "from": "gemini_sop",
+      "to": "studio_shoot",
+      "label": "approved dish",
+      "classification": "SOP score >=0.55",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelAt": [
+        638,
+        144
+      ]
+    },
+    {
+      "id": "studio-to-audit",
+      "from": "studio_shoot",
+      "to": "truth_auditor",
+      "label": "reshoot output",
+      "classification": "RGB 1024x1024",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight",
+      "labelAt": [
+        745,
+        214
+      ]
+    },
+    {
+      "id": "audit-to-synthid",
+      "from": "truth_auditor",
+      "to": "synthid",
+      "label": "risk <= 0.25",
+      "classification": "FTC compliant",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [
+        [
+          852,
+          271
+        ],
+        [
+          852,
+          157
+        ]
+      ],
+      "labelAt": [
+        852,
+        214
+      ]
+    },
+    {
+      "id": "synthid-to-gcs",
+      "from": "synthid",
+      "to": "gcs_store",
+      "label": "watermarked",
+      "classification": "C2PA signed",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight",
+      "labelAt": [
+        960,
+        214
+      ]
+    },
+    {
+      "id": "gcs-to-menu",
+      "from": "gcs_store",
+      "to": "live_menu",
+      "label": "live publish",
+      "classification": "canonical URL",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight",
+      "labelAt": [
+        960,
+        328
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Ingestion Pipeline",
+      "items": [
+        "Preflight enforces 1600px working cap and Lanczos upscaling if <200px",
+        "Gemini 3.8 Flash evaluates 12 discrete SOP rules via strict JSON Schema",
+        "Fast-fail bypass routes defective uploads in under 4.5 seconds"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Generative Foundation",
+      "items": [
+        "Gemini Nano Banana 2.1 is the standard automated studio reshoot engine",
+        "Harmonizes commercial lighting, contact shadows, and human/hand removal",
+        "Imagen 3 (imagen-3.0-capability-001) is strictly for optional manual edits"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Truth & Provenance",
+      "items": [
+        "Phase D 7-Criteria Truth Auditor eliminates culinary hallucinations",
+        "Actor-Critic feedback drives automated Pass 2 re-shoots when needed",
+        "Approved outputs receive Google SynthID v2 watermarks and C2PA claims"
+      ]
+    }
+  ]
+}

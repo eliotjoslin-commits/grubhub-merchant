@@ -1,0 +1,53 @@
+# Environment & Secrets
+.env
+.env.*
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*service-account*.json
+*secret*.json
+adc.json
+application_default_credentials.json
+
+# Python & Virtual Environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Terraform State, Plugins & Variable Files
+terraform/.terraform/
+**/.terraform/*
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfstate*
+*.tfstate
+*.tfstate.*
+terraform/*.tfvars
+terraform/*.tfvars.json
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+crash.log
+override.tf
+override.tf.json
+
+# Local Tools, Scratch & Caches
+tools/
+temp/
+.tempmediaStorage/
+artifacts_img/
+results/enhanced_images/test_*.jpg
+graphify-out/cache/
+graphify-out/.graphify*
+*.log
+.DS_Store

@@ -1,0 +1,4 @@
+project_id         = "your-gcp-project-id"
+region             = "us-central1"
+service_name       = "grubhub-merchant-platform"
+artifact_repo_name = "grubhub-merchant"

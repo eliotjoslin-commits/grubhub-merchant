@@ -1,0 +1,752 @@
+{
+  "deploy.sh": {
+    "mtime": 1788473957.2192962,
+    "ast_hash": "8119be66b4c4a03cf8a929377a18e3dd",
+    "semantic_hash": "8119be66b4c4a03cf8a929377a18e3dd"
+  },
+  "interactive_prd/diagrams/architecture.json": {
+    "mtime": 1791573206.2314281,
+    "ast_hash": "a30326f11b75c0e7880d81b8eb89df8e",
+    "semantic_hash": "a30326f11b75c0e7880d81b8eb89df8e"
+  },
+  "interactive_prd/diagrams/ingestion_dataflow.json": {
+    "mtime": 1791573206.4594467,
+    "ast_hash": "69d49edfbfe10e90d34a9d167bd90e4a",
+    "semantic_hash": "69d49edfbfe10e90d34a9d167bd90e4a"
+  },
+  "interactive_prd/diagrams/merchant_sequence.json": {
+    "mtime": 1791573206.559455,
+    "ast_hash": "d85ea481df931802456955765c5a8066",
+    "semantic_hash": "d85ea481df931802456955765c5a8066"
+  },
+  "results/moderation_decisions.json": {
+    "mtime": 1791580150.0198503,
+    "ast_hash": "1e10c479ff0784644052d27d526dadc3",
+    "semantic_hash": "1e10c479ff0784644052d27d526dadc3"
+  },
+  "scripts/build_interactive_prd.py": {
+    "mtime": 1791576084.2085254,
+    "ast_hash": "d5a69e6b177991ee2d7165f6b964f495",
+    "semantic_hash": "d5a69e6b177991ee2d7165f6b964f495"
+  },
+  "scripts/generate_prd_pdf.py": {
+    "mtime": 1791576084.252529,
+    "ast_hash": "465e058715bb4e1b0e2e8f39969da5a7",
+    "semantic_hash": "465e058715bb4e1b0e2e8f39969da5a7"
+  },
+  "scripts/rerun_core_images.py": {
+    "mtime": 1788485651.3065171,
+    "ast_hash": "c50e21de0d5eb4e66a3e14f01b082b74",
+    "semantic_hash": "c50e21de0d5eb4e66a3e14f01b082b74"
+  },
+  "src/authenticity_auditor.py": {
+    "mtime": 1791577698.2382033,
+    "ast_hash": "5a87748bd210e044e592c5a55a7e00ce",
+    "semantic_hash": "5a87748bd210e044e592c5a55a7e00ce"
+  },
+  "src/batch_runner.py": {
+    "mtime": 1788530897.0663223,
+    "ast_hash": "69b119c9fc46c46d1f715a4425427d0f",
+    "semantic_hash": "69b119c9fc46c46d1f715a4425427d0f"
+  },
+  "src/compositor.py": {
+    "mtime": 1788199128.8012128,
+    "ast_hash": "0413c90ca3520efe643e776f07598da2",
+    "semantic_hash": "0413c90ca3520efe643e776f07598da2"
+  },
+  "src/config.py": {
+    "mtime": 1791572122.8358483,
+    "ast_hash": "9def944fa8886d97bbd7f77961e4eaa9",
+    "semantic_hash": "9def944fa8886d97bbd7f77961e4eaa9"
+  },
+  "src/enhancer.py": {
+    "mtime": 1791579178.7530456,
+    "ast_hash": "a3bddb5b9bd79844251ae29e64294c04",
+    "semantic_hash": "a3bddb5b9bd79844251ae29e64294c04"
+  },
+  "src/evaluator.py": {
+    "mtime": 1788199142.729193,
+    "ast_hash": "bddc8028fc40f9774a4b97cc8af8bf48",
+    "semantic_hash": "bddc8028fc40f9774a4b97cc8af8bf48"
+  },
+  "src/gcs_storage.py": {
+    "mtime": 1791577766.3516362,
+    "ast_hash": "151092215be35dd472d8c22295c65861",
+    "semantic_hash": "151092215be35dd472d8c22295c65861"
+  },
+  "src/moderator.py": {
+    "mtime": 1791577698.1941998,
+    "ast_hash": "389f561aa5ff98645363b73623c6ba39",
+    "semantic_hash": "389f561aa5ff98645363b73623c6ba39"
+  },
+  "src/pipeline_runner.py": {
+    "mtime": 1791577851.4104297,
+    "ast_hash": "d8c75f1535873a83d66d1346deb5ea19",
+    "semantic_hash": "d8c75f1535873a83d66d1346deb5ea19"
+  },
+  "src/preflight.py": {
+    "mtime": 1791572138.8491416,
+    "ast_hash": "49e7b4d47592bb0126a651c10d74bfe3",
+    "semantic_hash": "49e7b4d47592bb0126a651c10d74bfe3"
+  },
+  "src/report_generator.py": {
+    "mtime": 1791579309.9316816,
+    "ast_hash": "474c339f4fa7485bd6b52db135a7884b",
+    "semantic_hash": "474c339f4fa7485bd6b52db135a7884b"
+  },
+  "src/server.py": {
+    "mtime": 1791572152.0902112,
+    "ast_hash": "9e75dc363f0a4e9e3e55cc3a35fa5d01",
+    "semantic_hash": "9e75dc363f0a4e9e3e55cc3a35fa5d01"
+  },
+  "src/sota_vision.py": {
+    "mtime": 1791579178.5290275,
+    "ast_hash": "d7e1d33fc74028c1d15fb7f36e0d15f5",
+    "semantic_hash": "d7e1d33fc74028c1d15fb7f36e0d15f5"
+  },
+  "terraform/.terraform.lock.hcl": {
+    "mtime": 1788473147.8027184,
+    "ast_hash": "088962b8f55bcb500c0431f25c9f968c",
+    "semantic_hash": "088962b8f55bcb500c0431f25c9f968c"
+  },
+  "terraform/main.tf": {
+    "mtime": 1791572152.2702258,
+    "ast_hash": "651983c73fd25ceda95ea31ba8f68ce1",
+    "semantic_hash": "651983c73fd25ceda95ea31ba8f68ce1"
+  },
+  "terraform/outputs.tf": {
+    "mtime": 1788473077.6324358,
+    "ast_hash": "a058c39f7552686f2e8c5e065f5d4624",
+    "semantic_hash": "a058c39f7552686f2e8c5e065f5d4624"
+  },
+  "terraform/variables.tf": {
+    "mtime": 1788473060.38846,
+    "ast_hash": "48ef31c7b350a2716c3b599594acd1d9",
+    "semantic_hash": "48ef31c7b350a2716c3b599594acd1d9"
+  },
+  "PRD_MERCHANT_MENU_IMAGE_PLATFORM.md": {
+    "mtime": 1791578013.539402,
+    "ast_hash": "48ca3354d197669fb041404ff42bd223",
+    "semantic_hash": "48ca3354d197669fb041404ff42bd223"
+  },
+  "README.md": {
+    "mtime": 1791572152.3182297,
+    "ast_hash": "be60671f722111e64b1fcaa41eb2173c",
+    "semantic_hash": "be60671f722111e64b1fcaa41eb2173c"
+  },
+  "interactive_prd/diagrams/architecture.html": {
+    "mtime": 1791575846.8573253,
+    "ast_hash": "6fe57a02c8bbc0c934c107f56a8f3b8e",
+    "semantic_hash": "6fe57a02c8bbc0c934c107f56a8f3b8e"
+  },
+  "interactive_prd/diagrams/ingestion_dataflow.html": {
+    "mtime": 1791575848.0094185,
+    "ast_hash": "02eb0681c0d3371addeeefde3913cc07",
+    "semantic_hash": "02eb0681c0d3371addeeefde3913cc07"
+  },
+  "interactive_prd/diagrams/merchant_sequence.html": {
+    "mtime": 1791575849.0335014,
+    "ast_hash": "33dd77d5c4aff8228615920e46763bae",
+    "semantic_hash": "33dd77d5c4aff8228615920e46763bae"
+  },
+  "interactive_prd/index.html": {
+    "mtime": 1791579414.672222,
+    "ast_hash": "de251157c95b489af9fa1a2a598021af",
+    "semantic_hash": "de251157c95b489af9fa1a2a598021af"
+  },
+  "requirements.txt": {
+    "mtime": 1788473087.770098,
+    "ast_hash": "d2ba26c297a8f99bc8138476d30f81f1",
+    "semantic_hash": "d2ba26c297a8f99bc8138476d30f81f1"
+  },
+  "results/PRD_INTERACTIVE_PLATFORM.html": {
+    "mtime": 1791579414.6842227,
+    "ast_hash": "de251157c95b489af9fa1a2a598021af",
+    "semantic_hash": "de251157c95b489af9fa1a2a598021af"
+  },
+  "results/PRD_MERCHANT_MENU_IMAGE_PLATFORM.html": {
+    "mtime": 1791579415.1482606,
+    "ast_hash": "e52919e4c8754b30660f778446b2ae67",
+    "semantic_hash": "e52919e4c8754b30660f778446b2ae67"
+  },
+  "results/benchmark_report.html": {
+    "mtime": 1791580150.0358515,
+    "ast_hash": "4a22201432ed25426d33e88325ef01a0",
+    "semantic_hash": "4a22201432ed25426d33e88325ef01a0"
+  },
+  "PRD_MERCHANT_MENU_IMAGE_PLATFORM.pdf": {
+    "mtime": 1791579421.2567582,
+    "ast_hash": "1e4e58e8a2c43f45d7056498c5bd7337",
+    "semantic_hash": "1e4e58e8a2c43f45d7056498c5bd7337"
+  },
+  "results/PRD_MERCHANT_MENU_IMAGE_PLATFORM.pdf": {
+    "mtime": 1791579421.6297421,
+    "ast_hash": "1e4e58e8a2c43f45d7056498c5bd7337",
+    "semantic_hash": "1e4e58e8a2c43f45d7056498c5bd7337"
+  },
+  "Sample-Photos/Sample-Photos/Appetizer1.jpg": {
+    "mtime": 1787913868.0,
+    "ast_hash": "91996d0293020dc62e53d6800c4eb538",
+    "semantic_hash": "91996d0293020dc62e53d6800c4eb538"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer2.jpg": {
+    "mtime": 1787912602.0,
+    "ast_hash": "7b54e205389a4958fb8d3a5c787c1ada",
+    "semantic_hash": "7b54e205389a4958fb8d3a5c787c1ada"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer3.jpg": {
+    "mtime": 1787912678.0,
+    "ast_hash": "c2439714bfa0a25a02f6a6e7f8b47419",
+    "semantic_hash": "c2439714bfa0a25a02f6a6e7f8b47419"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer4.jpg": {
+    "mtime": 1787912700.0,
+    "ast_hash": "8fa5d914644407343e6991bba5872aa1",
+    "semantic_hash": "8fa5d914644407343e6991bba5872aa1"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer5.jpg": {
+    "mtime": 1787913100.0,
+    "ast_hash": "09ea65d88c8aed0e8d1ae9f6a25e9c00",
+    "semantic_hash": "09ea65d88c8aed0e8d1ae9f6a25e9c00"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer6.jpg": {
+    "mtime": 1787913382.0,
+    "ast_hash": "2d62fdcffedf26e76b6287e848d6f06c",
+    "semantic_hash": "2d62fdcffedf26e76b6287e848d6f06c"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer7.jpg": {
+    "mtime": 1787913856.0,
+    "ast_hash": "a52ca3b4468600beca9f0ce538c656ad",
+    "semantic_hash": "a52ca3b4468600beca9f0ce538c656ad"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer8.jpg": {
+    "mtime": 1787916798.0,
+    "ast_hash": "a5e5f010dd8548f6120e5f1f963d9613",
+    "semantic_hash": "a5e5f010dd8548f6120e5f1f963d9613"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer9.jpg": {
+    "mtime": 1787915368.0,
+    "ast_hash": "c9622a06bf02dac56716b937f40b0ec1",
+    "semantic_hash": "c9622a06bf02dac56716b937f40b0ec1"
+  },
+  "Sample-Photos/Sample-Photos/Bowl1.jpg": {
+    "mtime": 1787913828.0,
+    "ast_hash": "b7004f027245ef7a7b5f49748fd8281b",
+    "semantic_hash": "b7004f027245ef7a7b5f49748fd8281b"
+  },
+  "Sample-Photos/Sample-Photos/Bowl2.jpg": {
+    "mtime": 1787913838.0,
+    "ast_hash": "38e3784b55ed4c3646066450fb65ed0c",
+    "semantic_hash": "38e3784b55ed4c3646066450fb65ed0c"
+  },
+  "Sample-Photos/Sample-Photos/Bowl3.jpg": {
+    "mtime": 1787913846.0,
+    "ast_hash": "48ab151fcf0bf938788be64e25bb7958",
+    "semantic_hash": "48ab151fcf0bf938788be64e25bb7958"
+  },
+  "Sample-Photos/Sample-Photos/Bowl4.jpg": {
+    "mtime": 1787913808.0,
+    "ast_hash": "75169bd4cfb1f22407d9cb43d890e38f",
+    "semantic_hash": "75169bd4cfb1f22407d9cb43d890e38f"
+  },
+  "Sample-Photos/Sample-Photos/Bowl5.jpg": {
+    "mtime": 1787916780.0,
+    "ast_hash": "b21b3d68efecf85380366934f159514b",
+    "semantic_hash": "b21b3d68efecf85380366934f159514b"
+  },
+  "Sample-Photos/Sample-Photos/Bowl6.jpg": {
+    "mtime": 1787916788.0,
+    "ast_hash": "a371bbed16165bb4ffae8cb3cf942191",
+    "semantic_hash": "a371bbed16165bb4ffae8cb3cf942191"
+  },
+  "Sample-Photos/Sample-Photos/Combo1.jpg": {
+    "mtime": 1787915582.0,
+    "ast_hash": "e9eb356162825f384537f45a0b3b0e6a",
+    "semantic_hash": "e9eb356162825f384537f45a0b3b0e6a"
+  },
+  "Sample-Photos/Sample-Photos/Combo2.jpg": {
+    "mtime": 1787915734.0,
+    "ast_hash": "dfa07eb5e722303be4fed97ab02f6271",
+    "semantic_hash": "dfa07eb5e722303be4fed97ab02f6271"
+  },
+  "Sample-Photos/Sample-Photos/Dessert1.jpg": {
+    "mtime": 1787913464.0,
+    "ast_hash": "6e05bb27ad3f1c62bc5b043ebe8920ee",
+    "semantic_hash": "6e05bb27ad3f1c62bc5b043ebe8920ee"
+  },
+  "Sample-Photos/Sample-Photos/Dessert1_1.jpg": {
+    "mtime": 1788450566.2627184,
+    "ast_hash": "6e05bb27ad3f1c62bc5b043ebe8920ee",
+    "semantic_hash": "6e05bb27ad3f1c62bc5b043ebe8920ee"
+  },
+  "Sample-Photos/Sample-Photos/Dessert2.jpg": {
+    "mtime": 1787914064.0,
+    "ast_hash": "b0dff2455beb27ee5d0f161790e6e99a",
+    "semantic_hash": "b0dff2455beb27ee5d0f161790e6e99a"
+  },
+  "Sample-Photos/Sample-Photos/Dessert3.jpg": {
+    "mtime": 1787914290.0,
+    "ast_hash": "d0c79ca46829fb039d7583da266cd4b7",
+    "semantic_hash": "d0c79ca46829fb039d7583da266cd4b7"
+  },
+  "Sample-Photos/Sample-Photos/Dessert4.jpg": {
+    "mtime": 1787914226.0,
+    "ast_hash": "fbe1eca883714e27db236fc502f47e40",
+    "semantic_hash": "fbe1eca883714e27db236fc502f47e40"
+  },
+  "Sample-Photos/Sample-Photos/Dessert5.jpg": {
+    "mtime": 1787914344.0,
+    "ast_hash": "e0303555477b6df024b6be33ea2bc6fe",
+    "semantic_hash": "e0303555477b6df024b6be33ea2bc6fe"
+  },
+  "Sample-Photos/Sample-Photos/Dessert6.jpg": {
+    "mtime": 1787915476.0,
+    "ast_hash": "4d393452b33c41e7bad1d95bccbfc5ba",
+    "semantic_hash": "4d393452b33c41e7bad1d95bccbfc5ba"
+  },
+  "Sample-Photos/Sample-Photos/Dessert7.jpg": {
+    "mtime": 1787916738.0,
+    "ast_hash": "58282c2c30b9844a06d580bafdd34903",
+    "semantic_hash": "58282c2c30b9844a06d580bafdd34903"
+  },
+  "Sample-Photos/Sample-Photos/Dessert8.jpg": {
+    "mtime": 1787916994.0,
+    "ast_hash": "52619bd1009df2830615dbd986b8e75e",
+    "semantic_hash": "52619bd1009df2830615dbd986b8e75e"
+  },
+  "Sample-Photos/Sample-Photos/Entrees1.jpg": {
+    "mtime": 1787911806.0,
+    "ast_hash": "819272a3e5a06ee46b123703089a72c4",
+    "semantic_hash": "819272a3e5a06ee46b123703089a72c4"
+  },
+  "Sample-Photos/Sample-Photos/Entrees10.jpg": {
+    "mtime": 1787915564.0,
+    "ast_hash": "22a370d5b6361a04107d96281f65212f",
+    "semantic_hash": "22a370d5b6361a04107d96281f65212f"
+  },
+  "Sample-Photos/Sample-Photos/Entrees2.jpg": {
+    "mtime": 1787911844.0,
+    "ast_hash": "6868888a4ca414b2d013d48b33158fc1",
+    "semantic_hash": "6868888a4ca414b2d013d48b33158fc1"
+  },
+  "Sample-Photos/Sample-Photos/Entrees3.jpg": {
+    "mtime": 1787911868.0,
+    "ast_hash": "a0aeb3a0c7e45e1f05bf96aa1639a955",
+    "semantic_hash": "a0aeb3a0c7e45e1f05bf96aa1639a955"
+  },
+  "Sample-Photos/Sample-Photos/Entrees4.jpg": {
+    "mtime": 1787911932.0,
+    "ast_hash": "faa6e6f1a8a1d808b9890b3b62ef4ad3",
+    "semantic_hash": "faa6e6f1a8a1d808b9890b3b62ef4ad3"
+  },
+  "Sample-Photos/Sample-Photos/Entrees5.jpg": {
+    "mtime": 1787912844.0,
+    "ast_hash": "3dd96c0b62da54993901136d0417226d",
+    "semantic_hash": "3dd96c0b62da54993901136d0417226d"
+  },
+  "Sample-Photos/Sample-Photos/Entrees6.jpg": {
+    "mtime": 1787913878.0,
+    "ast_hash": "5c3816c97ced330a0880e4fbfe20c287",
+    "semantic_hash": "5c3816c97ced330a0880e4fbfe20c287"
+  },
+  "Sample-Photos/Sample-Photos/Entrees7.jpg": {
+    "mtime": 1787913522.0,
+    "ast_hash": "cec8b78a1601be56a07d98c2532a27cc",
+    "semantic_hash": "cec8b78a1601be56a07d98c2532a27cc"
+  },
+  "Sample-Photos/Sample-Photos/Entrees8.jpg": {
+    "mtime": 1787913544.0,
+    "ast_hash": "6640846c5a972c242a7dabfd87181391",
+    "semantic_hash": "6640846c5a972c242a7dabfd87181391"
+  },
+  "Sample-Photos/Sample-Photos/Entrees9.jpg": {
+    "mtime": 1787914472.0,
+    "ast_hash": "67abff4303392048a2b87a332379fadf",
+    "semantic_hash": "67abff4303392048a2b87a332379fadf"
+  },
+  "Sample-Photos/Sample-Photos/Sandwich1.jpg": {
+    "mtime": 1787912902.0,
+    "ast_hash": "c49177968d54c6cdabc2fe390fa56ca4",
+    "semantic_hash": "c49177968d54c6cdabc2fe390fa56ca4"
+  },
+  "Sample-Photos/Sample-Photos/Sandwich2.jpg": {
+    "mtime": 1787912962.0,
+    "ast_hash": "90eb03e82c8b8270c05f75d78bfb6f72",
+    "semantic_hash": "90eb03e82c8b8270c05f75d78bfb6f72"
+  },
+  "Sample-Photos/Sample-Photos/Sandwich3.jpg": {
+    "mtime": 1787913890.0,
+    "ast_hash": "6159c5d97ab84bc4fddd65ef045c5177",
+    "semantic_hash": "6159c5d97ab84bc4fddd65ef045c5177"
+  },
+  "Sample-Photos/Sample-Photos/Sandwich4.jpg": {
+    "mtime": 1787914484.0,
+    "ast_hash": "f5493959b76e1f8259ab98ec92d8bce6",
+    "semantic_hash": "f5493959b76e1f8259ab98ec92d8bce6"
+  },
+  "Sample-Photos/Sample-Photos/Sandwich5.jpg": {
+    "mtime": 1787916818.0,
+    "ast_hash": "f190ec3be08e7f99310decf9ee02424a",
+    "semantic_hash": "f190ec3be08e7f99310decf9ee02424a"
+  },
+  "Sample-Photos/Sample-Photos/Sandwich6.png": {
+    "mtime": 1787917070.0,
+    "ast_hash": "af2f985241c7b93213c3c9758d8ba565",
+    "semantic_hash": "af2f985241c7b93213c3c9758d8ba565"
+  },
+  "Sample-Photos/Sample-Photos/Side1.jpg": {
+    "mtime": 1787915608.0,
+    "ast_hash": "d2a4ae0da521e1095f0a665238f0ffa7",
+    "semantic_hash": "d2a4ae0da521e1095f0a665238f0ffa7"
+  },
+  "Sample-Photos/Sample-Photos/Side2.jpg": {
+    "mtime": 1787915796.0,
+    "ast_hash": "6c6968bf8c055d8a06f4d20ebf0a41cf",
+    "semantic_hash": "6c6968bf8c055d8a06f4d20ebf0a41cf"
+  },
+  "Sample-Photos/Sample-Photos/Side3.jpg": {
+    "mtime": 1787916854.0,
+    "ast_hash": "0ab69ea39bd2bec0e9b7a6ccc27b2d4c",
+    "semantic_hash": "0ab69ea39bd2bec0e9b7a6ccc27b2d4c"
+  },
+  "Sample-Photos/Sample-Photos/Side4.jpg": {
+    "mtime": 1787916888.0,
+    "ast_hash": "6854befb714a4bdbb9485d17e9e57aeb",
+    "semantic_hash": "6854befb714a4bdbb9485d17e9e57aeb"
+  },
+  "Sample-Photos/Sample-Photos/Side5.jpg": {
+    "mtime": 1787916944.0,
+    "ast_hash": "51feeb8768103705f31e6b1236a8bc51",
+    "semantic_hash": "51feeb8768103705f31e6b1236a8bc51"
+  },
+  "Sample-Photos/Sample-Photos/Side6.jpg": {
+    "mtime": 1787917028.0,
+    "ast_hash": "6eadc9e612bc0523cd5a2b69edc2744f",
+    "semantic_hash": "6eadc9e612bc0523cd5a2b69edc2744f"
+  },
+  "Sample-Photos/Sample-Photos/Side7.jpg": {
+    "mtime": 1787917114.0,
+    "ast_hash": "8d21a38c36fc5655014a8adc678a8f40",
+    "semantic_hash": "8d21a38c36fc5655014a8adc678a8f40"
+  },
+  "Sample-Photos/Sample-Photos/combo3.jpg": {
+    "mtime": 1787916766.0,
+    "ast_hash": "3d981e95e652964999c447097c318bea",
+    "semantic_hash": "3d981e95e652964999c447097c318bea"
+  },
+  "Sample-Photos/Sample-Photos/combo4.jpg": {
+    "mtime": 1787916686.0,
+    "ast_hash": "e62d3f8bd433c1d3a12692c0f598c96e",
+    "semantic_hash": "e62d3f8bd433c1d3a12692c0f598c96e"
+  },
+  "assets/diagram_plates/architecture_plate.png": {
+    "mtime": 1791575892.4778478,
+    "ast_hash": "33aa7dacb524358f117ae484c99f427b",
+    "semantic_hash": "33aa7dacb524358f117ae484c99f427b"
+  },
+  "assets/diagram_plates/architecture_plate_clean.png": {
+    "mtime": 1789139702.8295162,
+    "ast_hash": "a2551f3b727e782de46b7150146b30c5",
+    "semantic_hash": "a2551f3b727e782de46b7150146b30c5"
+  },
+  "assets/diagram_plates/dataflow_plate.png": {
+    "mtime": 1791575892.4850163,
+    "ast_hash": "fb57000dd7272544877f173afa82c35e",
+    "semantic_hash": "fb57000dd7272544877f173afa82c35e"
+  },
+  "assets/diagram_plates/sequence_plate.png": {
+    "mtime": 1791575892.4939375,
+    "ast_hash": "28c18ffaaf8be1d6d9ac5c4df0a7b56d",
+    "semantic_hash": "28c18ffaaf8be1d6d9ac5c4df0a7b56d"
+  },
+  "results/enhanced_images/enhanced_Appetizer1.jpg": {
+    "mtime": 1791577844.481876,
+    "ast_hash": "678c6a33a302e8b6d5feac7427077171",
+    "semantic_hash": "678c6a33a302e8b6d5feac7427077171"
+  },
+  "results/enhanced_images/enhanced_Appetizer1_edited.jpg": {
+    "mtime": 1788453714.0273502,
+    "ast_hash": "161bc15733170bf1735a7bfafc64abef",
+    "semantic_hash": "161bc15733170bf1735a7bfafc64abef"
+  },
+  "results/enhanced_images/enhanced_Appetizer1_retouched.jpg": {
+    "mtime": 1788460829.2631702,
+    "ast_hash": "c06916d52cb61ad24c3e1b7a1940d250",
+    "semantic_hash": "c06916d52cb61ad24c3e1b7a1940d250"
+  },
+  "results/enhanced_images/enhanced_Appitizer2.jpg": {
+    "mtime": 1788487207.8603446,
+    "ast_hash": "369b64703f0a5473471f949d09fb8203",
+    "semantic_hash": "369b64703f0a5473471f949d09fb8203"
+  },
+  "results/enhanced_images/enhanced_Appitizer4.jpg": {
+    "mtime": 1788487238.2418568,
+    "ast_hash": "ea4191fe7c9d8d299b395bd8ed1ddeed",
+    "semantic_hash": "ea4191fe7c9d8d299b395bd8ed1ddeed"
+  },
+  "results/enhanced_images/enhanced_Appitizer5.jpg": {
+    "mtime": 1788487269.8642585,
+    "ast_hash": "14b47f4e3eb38cf4468ae428869e5d20",
+    "semantic_hash": "14b47f4e3eb38cf4468ae428869e5d20"
+  },
+  "results/enhanced_images/enhanced_Appitizer8.jpg": {
+    "mtime": 1788478571.8950171,
+    "ast_hash": "d03567377aeecbfb40c4029d30af0b34",
+    "semantic_hash": "d03567377aeecbfb40c4029d30af0b34"
+  },
+  "results/enhanced_images/enhanced_Dessert1.jpg": {
+    "mtime": 1788470488.9440055,
+    "ast_hash": "63dd7a4a63ce92ed56d432b80c6878c8",
+    "semantic_hash": "63dd7a4a63ce92ed56d432b80c6878c8"
+  },
+  "results/enhanced_images/enhanced_Dessert1_1.jpg": {
+    "mtime": 1788453395.9723117,
+    "ast_hash": "b02b43d2a0b1680aaa475b736ffdacd1",
+    "semantic_hash": "b02b43d2a0b1680aaa475b736ffdacd1"
+  },
+  "results/synthid_badge_after.png": {
+    "mtime": 1788468785.6326182,
+    "ast_hash": "941de6270b0d817d0a97b6c44765e7cc",
+    "semantic_hash": "941de6270b0d817d0a97b6c44765e7cc"
+  },
+  "Sample-Photos/Sample-Photos/Appitizer6_1.jpg": {
+    "mtime": 1791566111.038,
+    "ast_hash": "2d62fdcffedf26e76b6287e848d6f06c",
+    "semantic_hash": "2d62fdcffedf26e76b6287e848d6f06c"
+  },
+  "Sample-Photos/Sample-Photos/Screenshot_2026-09-14_at_12.23.16_PM.png": {
+    "mtime": 1790015664.237,
+    "ast_hash": "80415894c59ff9a83240c3952c58abc0",
+    "semantic_hash": "80415894c59ff9a83240c3952c58abc0"
+  },
+  "Sample-Photos/Sample-Photos/Screenshot_2026-09-15_at_1.21.08_PM.png": {
+    "mtime": 1790015714.373,
+    "ast_hash": "3bde734ccff4e495f09a3f93d3962a9f",
+    "semantic_hash": "3bde734ccff4e495f09a3f93d3962a9f"
+  },
+  "Sample-Photos/Sample-Photos/Screenshot_2026-09-16_at_4.09.24_PM.png": {
+    "mtime": 1789762624.679,
+    "ast_hash": "fd0d35aed8a61c09a5af15698ae9f1a6",
+    "semantic_hash": "fd0d35aed8a61c09a5af15698ae9f1a6"
+  },
+  "Sample-Photos/Sample-Photos/Screenshot_2026-10-06_at_10.38.27.png": {
+    "mtime": 1791297956.353,
+    "ast_hash": "1c6d1ad0014c5bee4a4936bab61e0dfe",
+    "semantic_hash": "1c6d1ad0014c5bee4a4936bab61e0dfe"
+  },
+  "Sample-Photos/Sample-Photos/front-view-chef-holding-food-plate.jpg": {
+    "mtime": 1791211760.797,
+    "ast_hash": "4885b15ccb22fb819baea7bab717ec1d",
+    "semantic_hash": "4885b15ccb22fb819baea7bab717ec1d"
+  },
+  "Sample-Photos/Sample-Photos/google-test-1.avif.jpg": {
+    "mtime": 1791270289.17,
+    "ast_hash": "fa5abbb689fbd625d133968d81441050",
+    "semantic_hash": "fa5abbb689fbd625d133968d81441050"
+  },
+  "Sample-Photos/Sample-Photos/google-test-3.jpg": {
+    "mtime": 1791272218.64,
+    "ast_hash": "58901777a82ce0a3dd00b655efc91a5c",
+    "semantic_hash": "58901777a82ce0a3dd00b655efc91a5c"
+  },
+  "Sample-Photos/Sample-Photos/google-test-4.jpg": {
+    "mtime": 1791272726.599,
+    "ast_hash": "a7eaa3790d4d1e01fb448e68a28915cc",
+    "semantic_hash": "a7eaa3790d4d1e01fb448e68a28915cc"
+  },
+  "Sample-Photos/Sample-Photos/google-test-5.jpg": {
+    "mtime": 1791273108.926,
+    "ast_hash": "396915cb8cabd501eb27572dce2a4fea",
+    "semantic_hash": "396915cb8cabd501eb27572dce2a4fea"
+  },
+  "Sample-Photos/Sample-Photos/google-test-6.jpg": {
+    "mtime": 1791273452.657,
+    "ast_hash": "08935e6801f06a04b3bab9f5141b7898",
+    "semantic_hash": "08935e6801f06a04b3bab9f5141b7898"
+  },
+  "Sample-Photos/Sample-Photos/google-test-7.jpg": {
+    "mtime": 1791304758.704,
+    "ast_hash": "6e85faabadcc747196a3bc344b65766d",
+    "semantic_hash": "6e85faabadcc747196a3bc344b65766d"
+  },
+  "Sample-Photos/Sample-Photos/google-test-8.jpg": {
+    "mtime": 1791530932.491,
+    "ast_hash": "46c58b637f8ee67787bee57cd088cd8a",
+    "semantic_hash": "46c58b637f8ee67787bee57cd088cd8a"
+  },
+  "Sample-Photos/Sample-Photos/imageUpdated.png": {
+    "mtime": 1790015657.892,
+    "ast_hash": "4be5fa76d63d863a20ff69fae49f246d",
+    "semantic_hash": "4be5fa76d63d863a20ff69fae49f246d"
+  },
+  "Sample-Photos/Sample-Photos/ordered-kfc-through-grubhub-this-is-how-it-arrived-v0-t8b7kkugc1dc1_edited.webp": {
+    "mtime": 1788539314.211,
+    "ast_hash": "803fad0dd471697cf318168ffdb4c0de",
+    "semantic_hash": "803fad0dd471697cf318168ffdb4c0de"
+  },
+  "results/enhanced_images/enhanced_Appitizer6.jpg": {
+    "mtime": 1791293858.403,
+    "ast_hash": "d3c197c6840784b98d224641325285bc",
+    "semantic_hash": "d3c197c6840784b98d224641325285bc"
+  },
+  "results/enhanced_images/enhanced_Appitizer6_1.jpg": {
+    "mtime": 1791566111.146,
+    "ast_hash": "ad077cb5d93abefe554ab4668ed67b35",
+    "semantic_hash": "ad077cb5d93abefe554ab4668ed67b35"
+  },
+  "results/enhanced_images/enhanced_Appitizer7.jpg": {
+    "mtime": 1791291980.339,
+    "ast_hash": "030b1ddce15d5ee05214217f2f71dc6f",
+    "semantic_hash": "030b1ddce15d5ee05214217f2f71dc6f"
+  },
+  "results/enhanced_images/enhanced_Bowl1.jpg": {
+    "mtime": 1791293859.89,
+    "ast_hash": "df60e43a068814506bd6597a502150d1",
+    "semantic_hash": "df60e43a068814506bd6597a502150d1"
+  },
+  "results/enhanced_images/enhanced_Bowl2.jpg": {
+    "mtime": 1791292005.838,
+    "ast_hash": "c4c5e190badf73e286b9e6b0105df1ad",
+    "semantic_hash": "c4c5e190badf73e286b9e6b0105df1ad"
+  },
+  "results/enhanced_images/enhanced_Bowl3.jpg": {
+    "mtime": 1791293857.462,
+    "ast_hash": "1feeefb9e9fbc0dc12e49a967ebec6f4",
+    "semantic_hash": "1feeefb9e9fbc0dc12e49a967ebec6f4"
+  },
+  "results/enhanced_images/enhanced_Combo1.jpg": {
+    "mtime": 1791293860.224,
+    "ast_hash": "36fe9344db13f419478c50b6135f18e0",
+    "semantic_hash": "36fe9344db13f419478c50b6135f18e0"
+  },
+  "results/enhanced_images/enhanced_Dessert2.jpg": {
+    "mtime": 1791293860.286,
+    "ast_hash": "a61cb6e1bb3ac7b47f32207bea3b8cd1",
+    "semantic_hash": "a61cb6e1bb3ac7b47f32207bea3b8cd1"
+  },
+  "results/enhanced_images/enhanced_Dessert4.jpg": {
+    "mtime": 1791293867.667,
+    "ast_hash": "37f30615480f94cfa9b00df90e10feed",
+    "semantic_hash": "37f30615480f94cfa9b00df90e10feed"
+  },
+  "results/enhanced_images/enhanced_Dessert5.jpg": {
+    "mtime": 1791293861.548,
+    "ast_hash": "92eaf569f051c2e057dc1529e6066774",
+    "semantic_hash": "92eaf569f051c2e057dc1529e6066774"
+  },
+  "results/enhanced_images/enhanced_Dessert6.jpg": {
+    "mtime": 1791293863.916,
+    "ast_hash": "4a82ae5815cae99880a02d0fb88eb1c6",
+    "semantic_hash": "4a82ae5815cae99880a02d0fb88eb1c6"
+  },
+  "results/enhanced_images/enhanced_Dessert8.jpg": {
+    "mtime": 1791293866.103,
+    "ast_hash": "abedf5340e57b5f3a4334db95cebf057",
+    "semantic_hash": "abedf5340e57b5f3a4334db95cebf057"
+  },
+  "results/enhanced_images/enhanced_Entrees2.jpg": {
+    "mtime": 1791292134.222,
+    "ast_hash": "2455a21daac78dc18fe465ca88e52a17",
+    "semantic_hash": "2455a21daac78dc18fe465ca88e52a17"
+  },
+  "results/enhanced_images/enhanced_Entrees4.jpg": {
+    "mtime": 1791292156.266,
+    "ast_hash": "26f86ce5ba02e82c5ef6f85842e67f96",
+    "semantic_hash": "26f86ce5ba02e82c5ef6f85842e67f96"
+  },
+  "results/enhanced_images/enhanced_Entrees5.jpg": {
+    "mtime": 1791292167.132,
+    "ast_hash": "a026ce7f185f2e4235ec75d418874639",
+    "semantic_hash": "a026ce7f185f2e4235ec75d418874639"
+  },
+  "results/enhanced_images/enhanced_Entrees6.jpg": {
+    "mtime": 1791292192.528,
+    "ast_hash": "27fa30e5a456b354ce921310978592d7",
+    "semantic_hash": "27fa30e5a456b354ce921310978592d7"
+  },
+  "results/enhanced_images/enhanced_Entrees7.jpg": {
+    "mtime": 1791292188.022,
+    "ast_hash": "02c335ddcac0d139a10b283a4a263ebb",
+    "semantic_hash": "02c335ddcac0d139a10b283a4a263ebb"
+  },
+  "results/enhanced_images/enhanced_Sandwich1.jpg": {
+    "mtime": 1791292206.488,
+    "ast_hash": "67d8e002b3d17bdb48292bb5742d164d",
+    "semantic_hash": "67d8e002b3d17bdb48292bb5742d164d"
+  },
+  "results/enhanced_images/enhanced_Sandwich2.jpg": {
+    "mtime": 1791292214.709,
+    "ast_hash": "95c28b839811a416b24ad588c7b1dfe7",
+    "semantic_hash": "95c28b839811a416b24ad588c7b1dfe7"
+  },
+  "results/enhanced_images/enhanced_Sandwich3.jpg": {
+    "mtime": 1791292224.049,
+    "ast_hash": "063b3aab522e076fbe26a32070109357",
+    "semantic_hash": "063b3aab522e076fbe26a32070109357"
+  },
+  "results/enhanced_images/enhanced_Sandwich5.jpg": {
+    "mtime": 1791292242.928,
+    "ast_hash": "b7424f8200d324e260aefd0dbe5458c1",
+    "semantic_hash": "b7424f8200d324e260aefd0dbe5458c1"
+  },
+  "results/enhanced_images/enhanced_Screenshot_2026-09-16_at_4.09.24_PM.jpg": {
+    "mtime": 1789762624.831,
+    "ast_hash": "5f3be72b8796aab6b8e31c65472355e5",
+    "semantic_hash": "5f3be72b8796aab6b8e31c65472355e5"
+  },
+  "results/enhanced_images/enhanced_Screenshot_2026-10-06_at_10.38.27.jpg": {
+    "mtime": 1791297956.463,
+    "ast_hash": "e15380688f1a481cc883d20fbb338691",
+    "semantic_hash": "e15380688f1a481cc883d20fbb338691"
+  },
+  "results/enhanced_images/enhanced_front-view-chef-holding-food-plate.jpg": {
+    "mtime": 1791245808.012,
+    "ast_hash": "547db886ffbbb98ed6f0346bf0590c3a",
+    "semantic_hash": "547db886ffbbb98ed6f0346bf0590c3a"
+  },
+  "results/enhanced_images/enhanced_google-test-1.avif.jpg": {
+    "mtime": 1791271760.222,
+    "ast_hash": "79fde27f863b02cebedf2f970d2cdc44",
+    "semantic_hash": "79fde27f863b02cebedf2f970d2cdc44"
+  },
+  "results/enhanced_images/enhanced_google-test-3.jpg": {
+    "mtime": 1791295242.487,
+    "ast_hash": "b613b3930287ef355766b437e06927cf",
+    "semantic_hash": "b613b3930287ef355766b437e06927cf"
+  },
+  "results/enhanced_images/enhanced_google-test-4.jpg": {
+    "mtime": 1791272726.735,
+    "ast_hash": "6c2a6b1c2762c653c8f7c82459b698c3",
+    "semantic_hash": "6c2a6b1c2762c653c8f7c82459b698c3"
+  },
+  "results/enhanced_images/enhanced_google-test-5.jpg": {
+    "mtime": 1791273109.018,
+    "ast_hash": "e6ddcb27a473c7d33907cc4068f2003d",
+    "semantic_hash": "e6ddcb27a473c7d33907cc4068f2003d"
+  },
+  "results/enhanced_images/enhanced_google-test-6.jpg": {
+    "mtime": 1791273452.757,
+    "ast_hash": "447fabd5a7b4e6934302fda0f9185c1a",
+    "semantic_hash": "447fabd5a7b4e6934302fda0f9185c1a"
+  },
+  "results/enhanced_images/enhanced_google-test-7.jpg": {
+    "mtime": 1791304758.799,
+    "ast_hash": "1d0585ad1edc592c31a2748e5fdd8908",
+    "semantic_hash": "1d0585ad1edc592c31a2748e5fdd8908"
+  },
+  "results/enhanced_images/enhanced_google-test-8.jpg": {
+    "mtime": 1791530932.607,
+    "ast_hash": "b5ac56151c2a3764288fbad65a3c6bef",
+    "semantic_hash": "b5ac56151c2a3764288fbad65a3c6bef"
+  },
+  "results/enhanced_images/enhanced_imageUpdated.jpg": {
+    "mtime": 1790015657.991,
+    "ast_hash": "2420ad37514fc1e6738d65710822f0ef",
+    "semantic_hash": "2420ad37514fc1e6738d65710822f0ef"
+  },
+  "results/enhanced_images/enhanced_ordered-kfc-through-grubhub-this-is-how-it-arrived-v0-t8b7kkugc1dc1_edited.jpg": {
+    "mtime": 1791211239.981,
+    "ast_hash": "5d39781a315d748dd0bb344299b158fd",
+    "semantic_hash": "5d39781a315d748dd0bb344299b158fd"
+  }
+}
